@@ -3,5 +3,5 @@ const refs = {
   output: document.getElementById("name-output"),
 }
 refs.input.addEventListener("input", (event) => {
-  refs.output.textContent = event.currentTarget.value;
+  refs.output.textContent = event.currentTarget.value.trim();
 });
