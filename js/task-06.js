@@ -1,9 +1,13 @@
 const textinput = document.getElementById("validation-input");
-const removeFocus = textinput.addEventListener("click", onClick);
+const removeFocus = textinput.addEventListener("blur", onBlur);
+const maxLength = Number(textinput.dataset.length);
 
-function  onClick(evt) {
-  const removeFocus = textinput.blur();
-  if (removeFocus < evt.datasetLength) {
-    
-  }
-}
+function onBlur(evt) {
+  if (evt.target.value.length === maxLength) {
+    evt.currentTarget.classList.add("valid");
+    evt.currentTarget.classList.remove("invalid");
+  } else {
+    evt.currentTarget.classList.remove("valid");
+    evt.currentTarget.classList.add("invalid");
+  };
+};
