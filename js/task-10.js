@@ -4,13 +4,16 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const create =  document.querySelector("button[data-create]");
-const createListener = create.addEventListener("click", onClick);
+const input = document.querySelector('input[type=number]');
+const inputListener = input.addEventListener("click", onClick);
+
+//const create =  document.querySelector("button[data-create]");
+//const createListener = create.addEventListener("click", onClick);
 
 function onClick(event) {
-  console.dir(event.currentTarget)
+  console.log(event.currentTarget.value);
 }
 
-function createBoxes(amount) {
+// function createBoxes(amount) {
 
-}
+// }
